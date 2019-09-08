@@ -2888,3 +2888,10 @@ write_textfile('cmu.txt', lst)
 lst = [x.strip() for x in s.split('\n') if "Berkeley" in x]
 print(len(lst))
 write_textfile('berkeley.txt', lst)
+lst = [x.strip() for x in s.split('\n') if "Google" in x or "DeepMind" in x]
+print(len(lst))
+write_textfile('google.txt', lst)
+lst = [x.strip() for x in s.split('\n') if "MSR" in x or "Microsoft" in x]
+print(len(lst))
+write_textfile('microsoft.txt', lst)
+print(sorted([x.strip() for x in s.split('\n') if len(x) > 0], key=len)[:16])
